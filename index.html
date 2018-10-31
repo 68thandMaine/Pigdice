@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-     <script src="js/scripts.js"></script>
-    <title>Pig Dice</title>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.3.1.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Pig Dice</title>
+</head>
+<body>
+  <div class="container">
 
-  </body>
+    <div id="player-one">
+      <div class="btnPlayerOne">
+        <button type="button" name="button" id="player-one-roll">Roll Player One</button>
+        <button type="button" name="button" id="player-one-hold">Hold Player One</button>
+      </div>
+      <div id="turn-score"></div>
+
+    </div>
+    <br>
+    <br>
+    <div id="player-two">
+      <div class="btnPlayerTwo">
+        <button type="button" name="button" id="player-two-roll">Roll Player Two</button>
+        <button type="button" name="button" id="player-two-hold">Hold Player Two</button>
+      </div>
+    </div>
+  </div>
+</body>
 </html>

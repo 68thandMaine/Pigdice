@@ -1,6 +1,5 @@
 //Business logic
 function Player() {
-  this.turn =
   this.score = 0
   this.totalScore = 0
 }
@@ -62,5 +61,14 @@ Player.prototype.roll = function (turn) {
 // }
 
 //User interface logic
-var playerOne = new Player(turn = true);
-var playerTwo = new Player;
+var playerOne = new Player();
+var playerTwo = new Player();
+
+$(document).ready(function(){
+  $("#player-one-roll").click(function() {
+    var result = playerOne.roll("PlayerOne")
+    var turnScore = playerOne.score;
+    $("#turn-score").text(turnScore)
+      debugger;
+  })
+});
