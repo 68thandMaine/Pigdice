@@ -1,24 +1,43 @@
 //Business logic
 function Player() {
+  this.turn =
   this.score = 0
-  // console.log( this.score);
   this.totalScore = 0
-  // console.log(this.totalScore);
-
 }
+
 Player.prototype.hold = function () {
-   this.totalScore += this.score
+  this.totalScore += this.score
+  playerOne.scoreChecker()
+  playerTwo.scoreChecker()
+  this.score = 0
 }
 
-Player.prototype.roll = function () {
-  var number = Math.floor((Math.random() * 6 ) + 1)
-  // console.log(number);
-  if (number === 1) {
-    this.score = 0
-  } else {
-   this.score += number
- }
+Player.prototype.scoreChecker = function () {
+  if (playerOne.totalScore >= 100) {
+    alert("Congrats! PlayerOne has won")
+  }
+  else if (playerTwo.totalScore >=100 ){
+    alert("Congratulations PlayerTwo, you have won!")
+  }
 }
+
+Player.prototype.roll = function (turn) {
+  var number = Math.floor((Math.random() * 6 ) + 1)
+  if (turn === "PlayerOne") {
+    if (number === 1) {
+      playerOne.score = 0
+    } else {
+      playerOne.score += number
+    }
+  } else if (turn === "PlayerTwo") {
+    if (number === 1) {
+      playerTwo.score = 0
+    } else {
+      playerTwo.score += number
+    }
+  }
+}
+
 
 // this.totalScore = this.score + number
 // Player.prototype.roll = function ("roll") {
@@ -43,5 +62,5 @@ Player.prototype.roll = function () {
 // }
 
 //User interface logic
-var playerOne = new Player;
+var playerOne = new Player(turn = true);
 var playerTwo = new Player;
