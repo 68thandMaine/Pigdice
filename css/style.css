@@ -12,3 +12,7 @@
 button {
   margin-bottom: 14px;
 }
+
+.opaque {
+  opacity: 0.5;
+}
