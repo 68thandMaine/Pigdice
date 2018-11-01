@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
@@ -8,27 +9,60 @@
   <script src="js/scripts.js"></script>
   <title>Pig Dice</title>
 </head>
+
 <body>
   <div class="container">
+    <div class="jumbotron">
+      <h1>Pig Dice</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h3>Player One</h3>
+            <div id="player-one">
+              <div class="btnPlayerOne">
+                <button type="button" name="button" id="player-one-roll">Roll Player One</button>
+                <button type="button" name="button" id="player-one-hold">Hold Player One</button>
+              </div>
+              <div>
+                <p> Your score for this round is: <span id="turn-score"></span></p>
+                <p> Your total score for the game is: <span id="total-score"></span></p>
+              </div>
 
-    <div id="player-one">
-      <div class="btnPlayerOne">
-        <button type="button" name="button" id="player-one-roll">Roll Player One</button>
-        <button type="button" name="button" id="player-one-hold">Hold Player One</button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div id="turn-score"></div>
-      <div id="total-score"></div>
-    </div>
-    <br>
-    <br>
-    <div id="player-two">
-      <div class="btnPlayerTwo">
-        <button type="button" name="button" id="player-two-roll">Roll Player Two</button>
-        <button type="button" name="button" id="player-two-hold">Hold Player Two</button>
+      <br>
+      <div class="col-md-4">
+
+        <div class="card" style="width: 18rem" id="roll-board">
+          <h3>You rolled</h3>
+          <img class="card-img-top" src="img/dice.png" alt="Card image cap">
+          <div class="card-body">
+
+            <div id="roll-number"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h3>Player Two</h3>
+            <div id="player-two">
+              <div class="btnPlayerTwo">
+                <button type="button" name="button" id="player-two-roll">Roll Player Two</button>
+                <button type="button" name="button" id="player-two-hold">Hold Player Two</button>
+              </div>
+            </div>
+            <div>
+              <p> Your score for this round is: <span id="player-two-turn-score"></span></p>
+              <p> Your total score for the game is: <span id="player-two-total-score"></span></p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div id="player-two-turn-score"></div>
-    <div id="player-two-total-score"></div>
-  </div>
-</body>
-</html>
+  </body>
+  </html>

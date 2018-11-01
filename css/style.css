@@ -1,0 +1,13 @@
+#roll-board {
+  text-align: center;
+  background-color: green;
+}
+
+#roll-number {
+  text-align: center;
+  font-size: 50px;
+}
+
+button {
+  margin-bottom: 14px;
+}
