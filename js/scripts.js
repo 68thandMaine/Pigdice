@@ -13,10 +13,10 @@ Player.prototype.hold = function () {
 
 Player.prototype.scoreChecker = function () {
   if (playerOne.totalScore >= 100) {
-    alert("Congrats! PlayerOne has won")
+    alert("Congratulations Player One, you have has won!")
   }
-  else if (playerTwo.totalScore >=100 ){
-    alert("Congratulations PlayerTwo, you have won!")
+  else if (playerTwo.totalScore >= 100 ){
+    alert("Congratulations Player Two, you have won!")
   }
 }
 
@@ -37,29 +37,6 @@ Player.prototype.roll = function (turn) {
   }
 }
 
-
-// this.totalScore = this.score + number
-// Player.prototype.roll = function ("roll") {
-//   if (action === "roll") {
-//     return this.score += roll()
-//   } else if (action === "hold") {
-//     return this.totalScore += this.score
-//   }
-// }
-// function dice () {
-//   return (Math.floor((Math.random() * 6 ) + 1));
-// }
-
-// function turnScore (dice) {
-// console.log(dice)
-//  if (dice === 1) {
-//   console.log(Player.score);
-//   return Player.score - Player.score
-// } else if (dice !== 1) {
-//    return dice
-//  }
-// }
-
 //User interface logic
 var playerOne = new Player();
 var playerTwo = new Player();
@@ -67,8 +44,23 @@ var playerTwo = new Player();
 $(document).ready(function(){
   $("#player-one-roll").click(function() {
     var result = playerOne.roll("PlayerOne")
-    var turnScore = playerOne.score;
-    $("#turn-score").text(turnScore)
-      debugger;
-  })
+    $("#turn-score").text(playerOne.score)
+  });
+  $("#player-one-hold").click(function() {
+    var result = playerOne.hold()
+    $("#total-score").text(playerOne.totalScore)
+    $("#turn-score").text(playerOne.score)
+  });
+
+  $("#player-two-roll").click(function() {
+    var result = playerTwo.roll("PlayerTwo")
+    $("#player-two-turn-score").text(playerTwo.score)
+  });
+  $("#player-two-hold").click(function() {
+    var result = playerTwo.hold()
+    $("#player-two-total-score").text(playerTwo.totalScore)
+    $("#player-two-turn-score").text(playerTwo.score)
+  });
+
+
 });
