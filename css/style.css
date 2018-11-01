@@ -1,6 +1,7 @@
 #roll-board {
   text-align: center;
-  background-color: green;
+  background-image: url(../img/cloth.jpg);
+  font-style: 'Coffee Tin';
 }
 
 #roll-number {
